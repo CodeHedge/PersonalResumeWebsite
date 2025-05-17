@@ -27,6 +27,7 @@ const skillCategories: SkillCategory[] = [
     name: 'Controls & Automation',
     skills: [
       'PLC and HMI Programming',
+      'Siemens and Rockwell',
       'Vision (3D, Thermal, Standard)',
       'SCADA Development',
       'MYSQL Database',
@@ -41,10 +42,10 @@ const skillCategories: SkillCategory[] = [
   {
     name: 'Technical',
     skills: [
+      'Python',
       '3D Modeling (Basic)',
       'PCB Design & Layout (Basic)',
       'Schematic Creation',
-      'Python',
       'REST API',
     ],
     icon: (
@@ -58,7 +59,6 @@ const skillCategories: SkillCategory[] = [
     skills: [
       'Strong Computer Skills',
       'Subnetting/Firewall/Switching',
-      'Small Business Owner',
     ],
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -69,6 +69,7 @@ const skillCategories: SkillCategory[] = [
   {
     name: 'Soft Skills',
     skills: [
+      'Small Business Owner',
       'Adaptable and Driven',
       'Great Communicator',
       'Innate Curiosity',
