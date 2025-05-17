@@ -18,7 +18,7 @@ export default function Header() {
           </div>
           <div className="relative w-32 h-32 rounded-full overflow-hidden bg-white/10 backdrop-blur-sm">
             <Image
-              src="/profile.jpg"
+              src="/profile.png"
               alt="Trent Hancock"
               fill
               className="object-cover"
