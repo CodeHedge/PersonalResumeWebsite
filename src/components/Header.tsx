@@ -13,7 +13,7 @@ export default function Header() {
               <span className="block transform hover:scale-105 transition-transform duration-200 delay-75">HANCOCK</span>
             </h1>
             <h2 className="text-2xl font-light mb-6 text-light-gray">
-              Sr. Controls Manufacturing Engineer
+              Sr. Manufacturing Controls Engineer
             </h2>
           </div>
           <div className="relative w-32 h-32 rounded-full overflow-hidden bg-light-gray/10 backdrop-blur-sm">

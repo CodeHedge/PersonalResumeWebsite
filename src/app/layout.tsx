@@ -6,7 +6,7 @@ import Navigation from '@/components/Navigation'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Trent Hancock - Sr. Controls Manufacturing Engineer',
+  title: 'Trent Hancock - Sr. Manufacturing Controls Engineer',
   description: 'Professional portfolio and resume of Trent Hancock, an accomplished Senior Manufacturing Controls Engineer specializing in complex manufacturing processes.',
 }
 
