@@ -28,9 +28,9 @@ export default function Header() {
         </div>
         <div className="mt-8 bg-white/10 backdrop-blur-sm p-6 rounded-lg transform hover:scale-[1.02] transition-transform duration-200">
           <p className="text-lg leading-relaxed text-blue-50">
-            Innovative Senior Manufacturing Controls Engineer with a proven track record in optimizing complex manufacturing processes. 
-            Combining deep technical expertise with a passion for engineering excellence, I specialize in developing cutting-edge automation 
-            solutions that drive operational efficiency. Whether it's implementing advanced control systems or mentoring future engineers, 
+            A motivated Senior Manufacturing Controls Engineer with a proven track record in optimizing complex manufacturing processes. 
+            Combining deep technical expertise with a passion for engineering, I specialize in developing automation 
+            solutions that drive operational efficiency. Whether it's implementing control systems or mentoring future engineers, 
             I bring the same level of dedication and innovation to every project.
           </p>
         </div>
