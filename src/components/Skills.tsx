@@ -66,7 +66,6 @@ const skillCategories: SkillCategory[] = [
       'Web Hosting',
       'Content Delivery Network',
       'DNS Management',
-
     ],
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -94,27 +93,27 @@ const skillCategories: SkillCategory[] = [
 export default function Skills() {
   return (
     <section className="mb-12">
-      <h2 className="text-2xl font-bold mb-6 text-gray-800">Expertise</h2>
+      <h2 className="text-2xl font-bold mb-6 text-primary-red">Expertise</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {skillCategories.map((category, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow p-6"
+            className="bg-primary-dark rounded-xl shadow-sm border border-primary-red/20 hover:shadow-md transition-shadow p-6"
           >
             <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mr-3">
+              <div className="w-10 h-10 bg-primary-red/20 rounded-lg flex items-center justify-center text-primary-red mr-3">
                 {category.icon}
               </div>
-              <h3 className="text-lg font-semibold text-gray-800">{category.name}</h3>
+              <h3 className="text-lg font-semibold text-light-gray">{category.name}</h3>
             </div>
             <ul className="space-y-2">
               {category.skills.map((skill, skillIndex) => (
                 <li
                   key={skillIndex}
-                  className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                  className="flex items-center text-gray hover:text-primary-red transition-colors"
                 >
                   <svg
-                    className="w-4 h-4 mr-2 text-blue-500"
+                    className="w-4 h-4 mr-2 text-primary-red"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

@@ -52,20 +52,20 @@ const experiences: ExperienceItem[] = [
 export default function Experience() {
   return (
     <section className="mb-12">
-      <h2 className="text-2xl font-bold mb-6 text-gray-800">Professional Experience</h2>
+      <h2 className="text-2xl font-bold mb-6 text-primary-red">Professional Experience</h2>
       <div className="space-y-8">
         {experiences.map((exp, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+          <div key={index} className="bg-primary-dark p-6 rounded-lg shadow-sm border border-primary-red/20">
             <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
               <div>
-                <h3 className="text-xl font-bold text-gray-800">{exp.title}</h3>
-                <p className="text-blue-600 font-semibold">{exp.company}</p>
+                <h3 className="text-xl font-bold text-light-gray">{exp.title}</h3>
+                <p className="text-primary-red font-semibold">{exp.company}</p>
               </div>
-              <p className="text-gray-600 mt-1 md:mt-0">{exp.period}</p>
+              <p className="text-gray mt-1 md:mt-0">{exp.period}</p>
             </div>
             <ul className="list-disc list-inside space-y-2">
               {exp.responsibilities.map((resp, idx) => (
-                <li key={idx} className="text-gray-700">
+                <li key={idx} className="text-gray">
                   {resp}
                 </li>
               ))}
