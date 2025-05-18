@@ -21,6 +21,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-gray-50`}>
         <Navigation />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   )
