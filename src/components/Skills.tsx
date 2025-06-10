@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 interface SkillCategory {
   name: string;
@@ -109,7 +110,13 @@ const skillCategories: SkillCategory[] = [
 
 export default function Skills() {
   return (
-    <section className="mb-12">
+    <motion.section
+      className="mb-12"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
       <h2 className="text-2xl font-bold mb-6 text-primary-red">Expertise</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {skillCategories.map((category, index) => (
@@ -149,6 +156,6 @@ export default function Skills() {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   )
-} 
+}
