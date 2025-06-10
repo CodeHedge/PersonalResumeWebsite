@@ -1,8 +1,15 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 export default function Contact() {
   return (
-    <section className="mb-12 transform -mt-8">
+    <motion.section
+      className="mb-12 transform -mt-8"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="bg-primary-dark rounded-xl shadow-lg p-1">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
           <a
@@ -60,6 +67,6 @@ export default function Contact() {
           </a>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
-} 
+}

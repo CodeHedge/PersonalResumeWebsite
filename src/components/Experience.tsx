@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 interface ExperienceItem {
   title: string;
@@ -51,7 +52,13 @@ const experiences: ExperienceItem[] = [
 
 export default function Experience() {
   return (
-    <section className="mb-12">
+    <motion.section
+      className="mb-12"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
       <h2 className="text-2xl font-bold mb-6 text-primary-red">Professional Experience</h2>
       <div className="space-y-8">
         {experiences.map((exp, index) => (
@@ -73,6 +80,6 @@ export default function Experience() {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
-} 
+}
