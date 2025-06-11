@@ -1,10 +1,6 @@
 "use client"
 import React from 'react'
-<<<<<<< HEAD
-import { motion } from 'framer-motion'
-=======
 import { motion } from '@/lib/framer-motion'
->>>>>>> origin/ikhzbq-codex/redesign-personal-resume-website
 
 interface SkillCategory {
   name: string;
