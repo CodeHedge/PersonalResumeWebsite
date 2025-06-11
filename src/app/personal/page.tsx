@@ -1,8 +1,15 @@
+"use client"
 import React from 'react'
+import { motion } from '@/lib/framer-motion'
 
 export default function PersonalPage() {
   return (
-    <main className="min-h-screen">
+    <motion.main
+      className="min-h-screen"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="bg-gradient-to-r from-primary-dark via-primary-red to-secondary-red text-light-gray py-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <h1 className="text-4xl font-bold mb-4">Beyond Engineering</h1>
@@ -124,6 +131,6 @@ export default function PersonalPage() {
           </div>
         </div>
       </div>
-    </main>
+    </motion.main>
   )
-} 
+}

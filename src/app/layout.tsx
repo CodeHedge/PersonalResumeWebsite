@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
 
-const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({ subsets: ['latin'], weight: ['400','700'] })
 
 export const metadata: Metadata = {
   title: 'Trent Hancock - Sr. Manufacturing Controls Engineer',
@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-gray-50`}>
+      <body className={`${poppins.className} bg-primary-dark text-light-gray`}>
         <Navigation />
         {children}
         <SpeedInsights />
