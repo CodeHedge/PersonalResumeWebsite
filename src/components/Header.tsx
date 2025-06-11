@@ -1,6 +1,11 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
+<<<<<<< HEAD
 import { motion } from 'framer-motion'
+=======
+import { motion } from '@/lib/framer-motion'
+>>>>>>> origin/ikhzbq-codex/redesign-personal-resume-website
 
 export default function Header() {
   return (

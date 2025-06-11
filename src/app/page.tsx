@@ -1,10 +1,15 @@
+"use client"
 import React from 'react'
 import Header from '@/components/Header'
 import Experience from '@/components/Experience'
 import Skills from '@/components/Skills'
 import Education from '@/components/Education'
 import Contact from '@/components/Contact'
+<<<<<<< HEAD
 import { motion } from 'framer-motion'
+=======
+import { motion } from '@/lib/framer-motion'
+>>>>>>> origin/ikhzbq-codex/redesign-personal-resume-website
 
 export default function Home() {
   return (
