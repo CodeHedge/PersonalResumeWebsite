@@ -11,9 +11,17 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
+    title: "SR. APPLICATIONS ENGINEER",
+    company: "Mitsubishi Electric Iconics Digital Solutions - Pentagon Project",
+    period: "SEP 2025 – PRESENT",
+    responsibilities: [
+      "SCADA Development: Developing SCADA applications using Iconics Genesis for Facilites Services Directorate (FSD) supporting critical infrastructure at the Pentagon."
+    ]
+  },
+  {
     title: "SR. MANUFACTURING CONTROLS ENGINEER",
     company: "Tesla Inc.",
-    period: "DEC 2020 – PRESENT",
+    period: "DEC 2020 – AUG 2025",
     responsibilities: [
       "Led Manufacturing Initiatives: Directed engineering efforts for Tesla's die casting and CNC facility with a focus on cell design, retrofits, and SCADA reporting.",
       "Launched New Parts (NPI): Led the controls side in the introduction of new parts into production, managing the acquisition of new equipment and integration into our manufacturing process.",
