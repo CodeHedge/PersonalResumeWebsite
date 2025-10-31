@@ -78,43 +78,39 @@ export default function Experience() {
       <div className="space-y-8">
         {experiences.map((exp, index) => (
           <div key={index} className="bg-primary-dark p-6 rounded-lg shadow-sm border border-primary-red/20">
-            <div className="flex flex-col md:flex-row gap-6 mb-4">
-              {/* Logo Container */}
-              <div className="flex gap-3 items-center md:items-start justify-start flex-shrink-0">
-                {exp.logos.map((logo, logoIdx) => (
-                  <div 
-                    key={logoIdx} 
-                    className="relative w-16 h-16 flex items-center justify-center bg-white/5 rounded-lg p-2 border border-white/10"
-                  >
-                    <Image
-                      src={logo}
-                      alt={`${exp.company} logo`}
-                      width={56}
-                      height={56}
-                      className="object-contain"
-                    />
-                  </div>
-                ))}
-              </div>
-
-              {/* Content Container */}
-              <div className="flex-1 min-w-0">
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-3">
-                  <div>
-                    <h3 className="text-xl font-bold text-light-gray">{exp.title}</h3>
-                    <p className="text-primary-red font-semibold">{exp.company}</p>
-                  </div>
-                  <p className="text-gray whitespace-nowrap">{exp.period}</p>
+            {/* Logo Container - Always on top */}
+            <div className="flex gap-3 items-center justify-start mb-4">
+              {exp.logos.map((logo, logoIdx) => (
+                <div 
+                  key={logoIdx} 
+                  className="relative w-16 h-16 flex items-center justify-center bg-white/5 rounded-lg p-1.5 border border-white/10 overflow-hidden"
+                >
+                  <Image
+                    src={logo}
+                    alt={`${exp.company} logo`}
+                    width={74}
+                    height={74}
+                    className="object-contain"
+                  />
                 </div>
-                <ul className="list-disc list-inside space-y-2">
-                  {exp.responsibilities.map((resp, idx) => (
-                    <li key={idx} className="text-gray">
-                      {resp}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              ))}
             </div>
+
+            {/* Content Container */}
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-3">
+              <div>
+                <h3 className="text-xl font-bold text-light-gray">{exp.title}</h3>
+                <p className="text-primary-red font-semibold">{exp.company}</p>
+              </div>
+              <p className="text-gray whitespace-nowrap">{exp.period}</p>
+            </div>
+            <ul className="list-disc list-inside space-y-2">
+              {exp.responsibilities.map((resp, idx) => (
+                <li key={idx} className="text-gray">
+                  {resp}
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
