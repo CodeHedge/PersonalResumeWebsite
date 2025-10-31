@@ -82,6 +82,7 @@ export default function PersonalPage() {
                   <span className="text-sm bg-primary-red/20 text-gray px-2 py-1 rounded border border-primary-red/20">PCB Design</span>
                   <span className="text-sm bg-primary-red/20 text-gray px-2 py-1 rounded border border-primary-red/20">E-commerce</span>
                   <span className="text-sm bg-primary-red/20 text-gray px-2 py-1 rounded border border-primary-red/20">Hardware</span>
+                  <span className="text-sm bg-primary-red/20 text-gray px-2 py-1 rounded border border-primary-red/20">SEO and Marketing</span>
                 </div>
               </div>
               <div className="border-l-4 border-primary-red pl-4">
