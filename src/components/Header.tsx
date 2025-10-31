@@ -34,7 +34,7 @@ export default function Header() {
               </motion.span>
             </h1>
             <h2 className="text-2xl font-light mb-6 text-light-gray">
-              Sr. Manufacturing Controls Engineer
+              Sr. Applications Engineer
             </h2>
           </div>
           <motion.div
@@ -59,10 +59,10 @@ export default function Header() {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <p className="text-lg leading-relaxed text-light-gray">
-            A motivated Senior Manufacturing Controls Engineer with a proven track record in optimizing complex manufacturing processes.
-            Combining deep technical expertise with a passion for engineering, I specialize in developing automation
-            solutions that drive operational efficiency. Whether it's implementing control systems or mentoring future engineers,
-            I bring the same level of dedication and innovation to every project.
+            A motivated Senior Applications Engineer specializing in SCADA development and critical infrastructure systems.
+            With expertise spanning manufacturing controls, automation solutions, and enterprise-level applications, I deliver
+            robust engineering solutions for complex operational environments. From developing SCADA systems for mission-critical
+            facilities to optimizing industrial processes, I bring innovative thinking and technical excellence to every challenge.
           </p>
         </motion.div>
       </div>

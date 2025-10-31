@@ -1,12 +1,14 @@
 "use client"
 import React from 'react'
 import { motion } from '@/lib/framer-motion'
+import Image from 'next/image'
 
 interface ExperienceItem {
   title: string;
   company: string;
   period: string;
   responsibilities: string[];
+  logos: string[];
 }
 
 const experiences: ExperienceItem[] = [
@@ -14,6 +16,7 @@ const experiences: ExperienceItem[] = [
     title: "SR. APPLICATIONS ENGINEER",
     company: "Mitsubishi Electric Iconics Digital Solutions - Pentagon Project",
     period: "SEP 2025 – PRESENT",
+    logos: ["/work_icons/Iconics.png", "/work_icons/Pentagon_white.png"],
     responsibilities: [
       "SCADA Development: Developing SCADA applications using Iconics Genesis for Facilites Services Directorate (FSD) supporting critical infrastructure at the Pentagon."
     ]
@@ -22,6 +25,7 @@ const experiences: ExperienceItem[] = [
     title: "SR. MANUFACTURING CONTROLS ENGINEER",
     company: "Tesla Inc.",
     period: "DEC 2020 – AUG 2025",
+    logos: ["/work_icons/Tesla-logo.png"],
     responsibilities: [
       "Led Manufacturing Initiatives: Directed engineering efforts for Tesla's die casting and CNC facility with a focus on cell design, retrofits, and SCADA reporting.",
       "Launched New Parts (NPI): Led the controls side in the introduction of new parts into production, managing the acquisition of new equipment and integration into our manufacturing process.",
@@ -35,6 +39,7 @@ const experiences: ExperienceItem[] = [
     title: "CONTROLS ENGINEER",
     company: "Marlen International",
     period: "SEP 2017 – MAY 2020",
+    logos: ["/work_icons/Marlen.png"],
     responsibilities: [
       "Led Controls Engineering Initiatives: Directed electrical and software development for OEM thermal food processing systems while managing IT operations for the engineering department.",
       "Designed & Enhanced Electrical Systems: Developed and upgraded electrical schematics for multiple machine lines; created detailed electrical BOMs and optimized control panel layouts.",
@@ -48,6 +53,7 @@ const experiences: ExperienceItem[] = [
     title: "SYSTEM ADMINISTRATOR",
     company: "Beasley Technology",
     period: "NOV 2013 – SEPT 2017",
+    logos: ["/work_icons/BeasleyTechnology.png"],
     responsibilities: [
       "Managed Remote IT Operations: Oversaw IT services for 30+ company and school accounts, ensuring high system availability and security.",
       "Maintained Network Infrastructure: Directed operations for firewalls, switches, access points, and servers, achieving a 99% uptime rate.",
@@ -72,20 +78,43 @@ export default function Experience() {
       <div className="space-y-8">
         {experiences.map((exp, index) => (
           <div key={index} className="bg-primary-dark p-6 rounded-lg shadow-sm border border-primary-red/20">
-            <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-              <div>
-                <h3 className="text-xl font-bold text-light-gray">{exp.title}</h3>
-                <p className="text-primary-red font-semibold">{exp.company}</p>
+            <div className="flex flex-col md:flex-row gap-6 mb-4">
+              {/* Logo Container */}
+              <div className="flex gap-3 items-center md:items-start justify-start flex-shrink-0">
+                {exp.logos.map((logo, logoIdx) => (
+                  <div 
+                    key={logoIdx} 
+                    className="relative w-16 h-16 flex items-center justify-center bg-white/5 rounded-lg p-2 border border-white/10"
+                  >
+                    <Image
+                      src={logo}
+                      alt={`${exp.company} logo`}
+                      width={56}
+                      height={56}
+                      className="object-contain"
+                    />
+                  </div>
+                ))}
               </div>
-              <p className="text-gray mt-1 md:mt-0">{exp.period}</p>
+
+              {/* Content Container */}
+              <div className="flex-1 min-w-0">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-3">
+                  <div>
+                    <h3 className="text-xl font-bold text-light-gray">{exp.title}</h3>
+                    <p className="text-primary-red font-semibold">{exp.company}</p>
+                  </div>
+                  <p className="text-gray whitespace-nowrap">{exp.period}</p>
+                </div>
+                <ul className="list-disc list-inside space-y-2">
+                  {exp.responsibilities.map((resp, idx) => (
+                    <li key={idx} className="text-gray">
+                      {resp}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <ul className="list-disc list-inside space-y-2">
-              {exp.responsibilities.map((resp, idx) => (
-                <li key={idx} className="text-gray">
-                  {resp}
-                </li>
-              ))}
-            </ul>
           </div>
         ))}
       </div>

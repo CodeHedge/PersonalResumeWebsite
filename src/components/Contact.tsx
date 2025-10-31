@@ -14,7 +14,7 @@ export default function Contact() {
       <div className="bg-primary-dark rounded-xl shadow-lg p-1">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
           <a
-            href="https://maps.google.com/?q=Modesto,CA"
+            href="https://maps.google.com/?q=Gaithersburg,MD"
             target="_blank"
             rel="noopener noreferrer"
             className="group bg-gradient-to-br from-primary-dark to-primary-dark/80 p-6 rounded-lg hover:from-primary-red/20 hover:to-primary-red/10 transition-colors duration-300"
@@ -28,7 +28,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-sm text-gray font-medium">Location</p>
-                <p className="text-light-gray font-semibold">Modesto, CA</p>
+                <p className="text-light-gray font-semibold">Gaithersburg, MD</p>
               </div>
             </div>
           </a>
